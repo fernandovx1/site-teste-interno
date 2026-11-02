@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Site Teste Interno</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="bg"></canvas>
+  <header>
+    <h1>Site Teste Interno</h1>
+    <p>Hospedado no HomeCloud. Animação em canvas, 22 mil registros em JSON (~3 MB) e um teste de CPU para dar peso ao site.</p>
+  </header>
+  <main>
+    <section class="grid">
+      <div class="card"><small>Registros</small><b id="total">…</b></div>
+      <div class="card"><small>Soma dos valores</small><b id="soma">…</b></div>
+      <div class="card"><small>Média</small><b id="media">…</b></div>
+      <div class="card"><small>Ativos</small><b id="ativos">…</b></div>
+    </section>
+    <div class="tools">
+      <input id="q" placeholder="Buscar nome ou cidade…">
+      <select id="st"><option value="">Todos os status</option><option>ativo</option><option>pendente</option><option>inativo</option></select>
+      <button id="bench">Rodar teste de CPU</button>
+    </div>
+    <div id="stats">Carregando dados…</div>
+    <p><small><span id="count">0</span> resultados (mostrando até 1500)</small></p>
+    <div class="card"><table><thead><tr><th>ID</th><th>Nome</th><th>Cidade</th><th>Status</th><th>Valor</th></tr></thead><tbody id="body"></tbody></table></div>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
